@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+
+<!-- ======= Head ======= -->
+<div th:replace="~{common/shoulder_fragment::head(title = '住所検索')}"></div>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <div th:replace="~{common/shoulder_fragment::header}"></div>
+
+  <main id="main" class="main">
+
+    <section class="section dashboard">
+      <div class="row">
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-2">
+          <div class="card info-card revenue-card">
+            <div class="card-body">
+              <h5 class="card-title">郵便番号で検索</h5>
+
+              <!-- No Labels Form -->
+              <form class="row g-3" method="post" th:action="@{/}" th:object="${requestAddressSearch}">
+                <div class="col-md-12">
+                  <input type="text" class="form-control" placeholder="123-4567" th:field="*{zipcode}">
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">検索</button>
+                </div>
+              </form><!-- End No Labels Form -->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-8">
+          <div class="card info-card revenue-card">
+            <div class="card-body">
+              <h5 class="card-title">住所一覧</h5>
+
+              <!-- Table with stripped rows -->
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">郵便番号</th>
+                    <th scope="col">都道府県</th>
+                    <th scope="col">市区町村</th>
+                    <th scope="col">住所</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr th:each="address:${addressList}">
+                    <td th:text="${address.zipcode}">〒231-0000</td>
+                    <td th:text="${address.prefecture}">神奈川県</td>
+                    <td th:text="${address.city}">横浜市中区</td>
+                    <td th:text="${address.address}">神奈川県横浜市中区（その他）</td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- End Table with stripped rows -->
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-1"></div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <div th:replace="~{common/shoulder_fragment::footer}"></div>
+
+</body>
+
+</html>

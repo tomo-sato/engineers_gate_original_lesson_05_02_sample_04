@@ -55,63 +55,59 @@
 
     <section class="section dashboard">
       <div class="row">
-        <div class="col-lg-2"></div>
+        <div class="col-lg-1"></div>
+
+        <div class="col-lg-2">
+          <div class="card info-card revenue-card">
+            <div class="card-body">
+              <h5 class="card-title">郵便番号で検索</h5>
+
+              <!-- No Labels Form -->
+              <form class="row g-3">
+                <div class="col-md-12">
+                  <input type="email" class="form-control" placeholder="123-4567">
+                </div>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">検索</button>
+                </div>
+              </form><!-- End No Labels Form -->
+            </div>
+          </div>
+        </div>
 
         <div class="col-lg-8">
           <div class="card info-card revenue-card">
-            <div class="filter">
-              <button type="button" class="btn btn-primary btn-lg">登録</button>
-            </div>
-
             <div class="card-body">
-              <h5 class="card-title">メンバー一覧</h5>
+              <h5 class="card-title">住所一覧</h5>
 
               <!-- Table with stripped rows -->
               <table class="table table-striped">
                 <thead>
                   <tr>
-                    <th scope="col">ID</th>
-                    <th scope="col">名前</th>
-                    <th scope="col">メールアドレス</th>
-                    <th scope="col">登録日</th>
-                    <th scope="col" style="width: 80px;">削除</th>
+                    <th scope="col">郵便番号</th>
+                    <th scope="col">都道府県</th>
+                    <th scope="col">市区町村</th>
+                    <th scope="col">住所</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row"><a href="#">1</a></th>
-                    <td><a href="#">浅井 那奈</a></td>
-                    <td>asai_nana@example.com</td>
-                    <td>2016-05-25</td>
-                    <td><button type="button" class="btn btn-danger btn-sm">削除</button></td>
+                    <td>〒231-0000</td>
+                    <td>神奈川県</td>
+                    <td>横浜市中区</td>
+                    <td>神奈川県横浜市中区（その他）</td>
                   </tr>
                   <tr>
-                    <th scope="row"><a href="#">2</a></th>
-                    <td><a href="#">根本 徹</a></td>
-                    <td>nemoto_tohru@example.com</td>
-                    <td>2014-12-05</td>
-                    <td><button type="button" class="btn btn-danger btn-sm">削除</button></td>
+                    <td>〒231-0001</td>
+                    <td>神奈川県</td>
+                    <td>横浜市中区</td>
+                    <td>神奈川県横浜市中区新港</td>
                   </tr>
                   <tr>
-                    <th scope="row"><a href="#">3</a></th>
-                    <td><a href="#">西井 弘也</a></td>
-                    <td>nishii_hironari@example.com</td>
-                    <td>2011-08-12</td>
-                    <td><button type="button" class="btn btn-danger btn-sm">削除</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><a href="#">4</a></th>
-                    <td><a href="#">菅谷 千夏</a></td>
-                    <td>sugaya_chinatsu@example.com</td>
-                    <td>2012-06-11</td>
-                    <td><button type="button" class="btn btn-danger btn-sm">削除</button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row"><a href="#">5</a></th>
-                    <td><a href="#">飯田 なつみ</a></td>
-                    <td>iida_natsumi@example.com</td>
-                    <td>2011-04-19</td>
-                    <td><button type="button" class="btn btn-danger btn-sm">削除</button></td>
+                    <td>〒231-0002</td>
+                    <td>神奈川県</td>
+                    <td>横浜市中区</td>
+                    <td>神奈川県横浜市中区海岸通</td>
                   </tr>
                 </tbody>
               </table>
@@ -121,7 +117,7 @@
           </div>
         </div>
 
-        <div class="col-lg-2"></div>
+        <div class="col-lg-1"></div>
       </div>
     </section>
 
